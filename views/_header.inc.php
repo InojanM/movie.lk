@@ -17,7 +17,7 @@
     <title> Movie.lk</title>
 </head>
 
-<body style="background-image: url('b.jpg')">
+<body style="background-image: url('http://localhost/imgs/b.jpg')">
 
 <!-- Nav bar staring -->
 <div class="container">
