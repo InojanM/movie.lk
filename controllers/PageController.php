@@ -8,15 +8,15 @@
 
 class PageController
 {
-    public function home(){
+    public static function home(){
         include 'views/home.php';
     }
 
-    public function movies(){
+    public static function movies(){
         include 'views/movies.php';
     }
 
-    public function theaters(){
+    public static function theaters(){
         include 'views/theaters.php';
     }
 
