@@ -1,6 +1,7 @@
 <?php
 
 require_once 'core/Router.php';
+require_once 'core/AppHelper.php';
 
 spl_autoload_register(function ($className) {
 

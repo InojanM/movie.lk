@@ -17,7 +17,7 @@
     <title> Movie.lk</title>
 </head>
 
-<body style="background-image: url('http://localhost/imgs/b.jpg')">
+<body style="background-image: url('<?= AppHelper::getBaseURL() ?>/imgs/b.jpg')">
 
 <!-- Nav bar staring -->
 <div class="container">
@@ -83,7 +83,7 @@
             <div class="carousel-inner">
 
                 <div class="item active">
-                    <img src="imgs/Sarkar.jpg" alt="Los Angeles" style="width:100%;">
+                    <img src="<?= AppHelper::getBaseURL() ?>/imgs/Sarkar.jpg" alt="Los Angeles" style="width:100%;">
                     <div class="carousel-caption">
                         <h3>Los Angeles</h3>
                         <p>LA is always so much fun!</p>
@@ -91,7 +91,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="imgs/petta.jpg" alt="Chicago" style="width:100%;">
+                    <img src="<?= AppHelper::getBaseURL() ?>/imgs/petta.jpg" alt="Chicago" style="width:100%;">
                     <div class="carousel-caption">
                         <h3>Chicago</h3>
                         <p>Thank you, Chicago!</p>
@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="imgs/visuwasam.jpg" alt="New York" style="width:100%;">
+                    <img src="<?= AppHelper::getBaseURL() ?>/imgs/visuwasam.jpg" alt="New York" style="width:100%;">
                     <div class="carousel-caption">
                         <h3>New York</h3>
                         <p>We love the Big Apple!</p>
@@ -107,7 +107,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="imgs/aqua_man.jpg" alt="Los Angeles" style="width:100%;">
+                    <img src="<?= AppHelper::getBaseURL() ?>/imgs/aqua_man.jpg" alt="Los Angeles" style="width:100%;">
                     <div class="carousel-caption">
                         <h3>Los Angeles</h3>
                         <p>LA is always so much fun!</p>
@@ -115,7 +115,7 @@
                 </div>
 
                 <div class="item">
-                    <img src="imgs/hindi.jpg" alt="Chicago" style="width:100%;">
+                    <img src="<?= AppHelper::getBaseURL() ?>/imgs/hindi.jpg" alt="Chicago" style="width:100%;">
                     <div class="carousel-caption">
                         <h3>Chicago</h3>
                         <p>Thank you, Chicago!</p>
