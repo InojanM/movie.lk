@@ -17,4 +17,9 @@ class AppHelper
 
     }
 
+    public static function redirect($url)
+    {
+        return header('Location:' . self::getBaseURL() . $url);
+    }
+
 }

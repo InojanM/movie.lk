@@ -1,5 +1,10 @@
 <?php
 
-include_once "core/AppHelper.php";
+include 'core/Database.php';
 
-var_dump(AppHelper::getBaseURL());
+Database::db();
+$res = Database::selectAllTheatersOwner();
+
+
+
+
