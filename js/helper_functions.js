@@ -1,8 +1,8 @@
-function view() {
+function view(id) {
 
-    var details = document.getElementById('view-page');
+    var details = document.getElementById('view-page' + id);
 
-    if (details.style.display == "none") {
+    if (details.style.display === "none") {
         details.style.display = "block";
     }
     else {
@@ -32,4 +32,20 @@ function add_show_time() {
         new_movie.style.display = "none";
     }
 }
+
+function close_movie_post() {
+    var movie = document.getElementById('movie');
+    if (movie.style.display === "block") {
+        movie.style.display = "none";
+    } else {
+        movie.style.display = "none";
+    }
+}
+
+$(document).ready(function () {
+    $('movie_post').click(function () {
+
+    })
+
+})
 

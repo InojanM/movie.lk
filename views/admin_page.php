@@ -1,7 +1,1 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Inojan
- * Date: 1/14/2019
- * Time: 9:01 PM
- */
+<h1 class="text-center" style="color: green"> This is admin page</h1>

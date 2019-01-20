@@ -38,114 +38,106 @@
     </div>
 
 
-    <div class="col-sm-9 ">
+    <div class="col-sm-9 " style="margin-top: 30px">
 
-        <div class="row" style="margin-top: 20px">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-6">
-
-                <div class="text-center">
-
-                    <button type="button" class="btn btn-default active" id="remove-border-redius"><h5> NOW PLAYING</h5>
-                    </button>
-                    <button type="button" class="btn btn-default" id="remove-border-redius"><h5> COMING SOON</h5>
-                    </button>
-                </div>
-
-            </div>
-            <div class="col-sm-3">
-                <a href=""><h5> View More !</h5></a>
-            </div>
-        </div>
-
-        <div class="row" style="margin-top: 50px">
+        <!-- Nav pills -->
+        <ul class="nav nav-pills " role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="pill" href="#menu1" id="remove-border-redius">Running Movies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="pill" href="#menu2" id="remove-border-redius">Upcoming Movies</a>
+            </li>
+        </ul>
 
 
-            <div class="col-sm-4" id="movie-post">
-                <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/Sarkar.jpg" alt=""
-                     style="width: 100%;">
-                <h4> Sarkar</h4>
-                <h5> Tamil</h5>
-                <a href="">
-                    <button class="btn btn-danger navbar-btn" id="remove-border-redius" style="width: 100%">View Playing
-                        Theaters
-                    </button>
-                </a>
-            </div>
+        <!-- Tab panes -->
+        <div class="tab-content">
 
+            <div id="menu1 " class="tab-pane active "><br>
 
-            <div class="col-sm-4" id="movie-post">
-                <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/hindi.jpg" alt=""
-                     style="width: 100%;">
-                <h4> Hindi</h4>
-                <h5> Hindi</h5>
-                <a href="">
-                    <button class="btn btn-danger navbar-btn" id="remove-border-redius" style="width: 100%">View Playing
-                        Theaters
-                    </button>
-                </a>
-            </div>
+                <?php
+                $running_movie = Movie::select_current_movies();
+                foreach ($running_movie
 
+                         as $rm):
+                    ?>
+                    <div class="col-sm-4">
 
-            <div class="col-sm-4" id="movie-post">
-                <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/aqua_man.jpg" alt=""
-                     style="width: 100%;">
-                <h4> Aquaman</h4>
-                <h5> English</h5>
-                <a href="">
-                    <button class="btn btn-danger navbar-btn" id="remove-border-redius" style="width: 100%">View Playing
-                        Theaters
-                    </button>
-                </a>
-            </div>
-
-            <div class="col-sm-4" id="movie-post">
-                <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/Sarkar.jpg" alt=""
-                     style="width: 100%;">
-                <h4> Sarkar</h4>
-                <h5> Tamil</h5>
-                <a href="">
-                    <button class="btn btn-danger navbar-btn" id="remove-border-redius" style="width: 100%">View Playing
-                        Theaters
-                    </button>
-                </a>
-            </div>
-
-
-            <div class="col-sm-4" id="movie-post">
-                <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/hindi.jpg" alt=""
-                     style="width: 100%">
-                <h4> Hindi</h4>
-                <h5> Hindi</h5>
-                <a href="">
-                    <button class="btn btn-danger navbar-btn" id="remove-border-redius" style="width: 100%">View Playing
-                        Theaters
-                    </button>
-                </a>
-            </div>
-
-
-            <div class="col-sm-4" id="movie-post">
-                <div class="card-group">
-                    <div class="card">
-                        <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/hindi.jpg" alt=""
-                             style="width: 100%">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Last updated 3 mins ago</small>
-                        </div>
+                        <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/<?= $rm->img_url ?>" alt=""
+                             style="width: 100%;border-bottom-color: green ; border-bottom: 40px ; border-bottom: solid">
+                        <h4> <?= $rm->movie_name ?></h4>
+                        <h5> <?= $rm->language ?></h5>
+                        <a href="">
+                            <button class="btn btn-danger navbar-btn" id="remove-border-redius"
+                                    style="width: 100%">
+                                View Playing Theaters
+                            </button>
+                        </a>
                     </div>
-                </div>
+                <?php endforeach; ?>
+
+
             </div>
 
 
+            <div id="menu1" class="tab-pane fade "><br>
+
+                <?php
+                $running_movie = Movie::select_current_movies();
+                foreach ($running_movie
+
+                         as $rm):
+                    ?>
+                    <div class="col-sm-4">
+
+                        <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/<?= $rm->img_url ?>" alt=""
+                             style="width: 100%;border-bottom-color: green ; border-bottom: 40px ; border-bottom: solid">
+                        <h4> <?= $rm->movie_name ?></h4>
+                        <h5> <?= $rm->language ?></h5>
+                        <a href="">
+                            <button class="btn btn-danger navbar-btn" id="remove-border-redius"
+                                    style="width: 100%">
+                                View Playing Theaters
+                            </button>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+
+
+            </div>
+
+
+            <div id="menu2" class="tab-pane fade"><br>
+
+                <?php
+                $upcoming_movies = Movie::select_upcoming_movies();
+                foreach ($upcoming_movies
+
+                         as $um):
+                    $fade = "fade";
+                    ?>
+                    <div class="col-sm-4">
+
+                        <h4 style="color: chocolate" class="text-center"><i>Release on</i> <?= $um->release_date ?></h4>
+                        <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/<?= $um->img_url ?>" alt=""
+                             style="width: 100%;border-bottom-color: green ; border-bottom: 40px ; border-bottom: solid">
+                        <h4> <?= $um->movie_name ?></h4>
+                        <h5> <?= $um->language ?></h5>
+                        <a href="">
+                            <button class="btn btn-danger navbar-btn" id="remove-border-redius"
+                                    style="width: 100%">
+                                View Playing Theaters
+                            </button>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+
+            </div>
         </div>
-
-
     </div>
+
+
+</div>
 </div>
 

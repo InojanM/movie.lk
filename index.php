@@ -8,6 +8,8 @@ if (!empty($_GET)){
 
 require_once 'core/Router.php';
 require_once 'core/AppHelper.php';
+require_once 'core/Movie.php';
+require_once 'core/Theaters.php';
 
 spl_autoload_register(function ($className) {
 

@@ -39,19 +39,22 @@
         <h1 class="text-center" style="margin-bottom: 20px"> Theaters</h1>
 
 
+        <?php
 
+        $theaters = Theaters::selectAll();
+       foreach ($theaters as $t):
+           $id = $t->id;
+         ?>
         <div class="card" style="margin-bottom: 20px ; border-left:gold solid 10px ;" id="remove-border-redius">
             <div class="card-header">
-                <b style="color: chocolate">MAJESTIC CINEMA </b>
-                <button style="float: right" type="button" onclick="document.getElementById(view())"> VIEW PLAYING MOVIES</button>
-                <p> COLOMBO 04 | Tel 011 3523256 </p>
+                <b style="color: chocolate"><?= $t->theater_name?></b>
+                <button style="float: right" type="button" onclick="document.getElementById(view(<?= $id?>))"> VIEW PLAYING MOVIES</button>
+                <p> <?php echo $t->place . " | " . $t->contact_number ?> </p>
             </div>
             <!--  JS hide post-->
-            <div class="card-body" id="view-page" style="display: none">
+            <div class="card-body" id="view-page<?= $id?>" style="display: none">
 
                 <h5 class="card-title">Now Playing</h5>
-
-
                 <div class="row">
                     <div class="col-sm-3" style="margin-bottom: 30px">
                         <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/p1.jpg" alt="" style="width: 100%">
@@ -76,40 +79,9 @@
 
             </div>
         </div>
-
-        <div class="card" style="margin-bottom: 20px ; border-left:gold solid 10px ;" id="remove-border-redius">
-            <div class="card-header">
-                <b style="color: chocolate">SELLAM PREMIER </b>
-                <button style="float: right" type="button" onclick="document.getElementById(view())"> VIEW PLAYING MOVIES</button>
-                <p> BATTICALOA | Tel 065 3523256 </p>
-            </div>
-            <!--  JS hide post-->
-            <div class="card-body" id="view-page" style="display: none">
-
-                <h5 class="card-title">Now Playing</h5>
+        <?php endforeach; ?>
 
 
-                <div class="row">
-                    <div class="col-sm-3" style="margin-bottom: 30px">
-                        <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/p1.jpg" alt="" style="width: 100%">
-                        <h4 style="color: darkred"> Show Times</h4>
-                        <h5> 10:30 | 13.30 | 16:30 | 21:30  </h5>
-
-                    </div>
-
-                    <div class="col-sm-3" style="margin-bottom: 30px">
-                        <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/p2.jpg" alt="" style="width: 100%">
-                    </div>
-
-                    <div class="col-sm-3" style="margin-bottom: 30px">
-                        <img src="<?= AppHelper::getBaseURL() ?>/movie.lk/imgs/p3.jpg" alt="" style="width: 100%;">
-                    </div>
-
-
-                </div>
-
-            </div>
-        </div>
 
 
 
